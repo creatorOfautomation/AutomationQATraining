@@ -37,8 +37,4 @@ public class Calculator {
             throw new DivisionOnZeroException("Попытка деления на 0");
         }
     }
-
-    public static void main(String[] args) throws WrongFormatExpressionException, DivisionOnZeroException {
-        System.out.println(evaluate("8-2-2"));
-    }
 }

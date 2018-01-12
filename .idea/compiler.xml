@@ -6,11 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="AutomationTests" />
+        <module name="Calculator" />
+        <module name="comtestservlet" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AutomationTests" target="1.8" />
+      <module name="Calculator" target="1.8" />
+      <module name="comexample" target="1.8" />
+      <module name="comtestservlet" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
