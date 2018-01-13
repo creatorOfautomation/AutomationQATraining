@@ -1,12 +1,14 @@
 package methods;
 
+import com.exception.DivisionOnZeroException;
+import com.exception.WrongFormatExpressionException;
 import java.util.Arrays;
 
 public class Calculator {
 
     private static int result;
 
-    public static int evaluate(String expression) throws Exception {
+    public static int evaluate(String expression) throws WrongFormatExpressionException, DivisionOnZeroException {
         String[] add;
         int elOfExpression[];
 
@@ -30,7 +32,9 @@ public class Calculator {
                 return 0;
             }
         } catch (NumberFormatException e) {
-            throw new Exception("Попытка деления на 0");
+            throw new WrongFormatExpressionException("Неверный формат выражения");
+        } catch (ArithmeticException e) {
+            throw new DivisionOnZeroException("Попытка деления на 0");
         }
     }
 }
