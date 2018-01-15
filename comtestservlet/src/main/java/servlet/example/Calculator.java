@@ -1,14 +1,12 @@
-package methods;
+package servlet.example;
 
-import com.exception.DivisionOnZeroException;
-import com.exception.WrongFormatExpressionException;
 import java.util.Arrays;
 
 public class Calculator {
 
     private static int result;
 
-    public static int evaluate(String expression) throws WrongFormatExpressionException, DivisionOnZeroException {
+    public static int evaluate(String expression) throws Exception {
         String[] add;
         int elOfExpression[];
 
@@ -32,9 +30,7 @@ public class Calculator {
                 return 0;
             }
         } catch (NumberFormatException e) {
-            throw new WrongFormatExpressionException("Неверный формат выражения");
-        } catch (ArithmeticException e) {
-            throw new DivisionOnZeroException("Попытка деления на 0");
+            throw new Exception("Да что ты твортшь. Остепенись, пожалуйста. Ты делаешь мне больно...");
         }
     }
 }

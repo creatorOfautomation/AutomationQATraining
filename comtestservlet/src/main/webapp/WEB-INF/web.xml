@@ -4,13 +4,16 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-  <!--<servlet-mapping>-->
-    <!--<servlet-name>CalculatorServlet</servlet-name>-->
-    <!--<url-pattern>/hello</url-pattern>-->
-  <!--</servlet-mapping>-->
 
-  <!--<servlet>-->
-    <!--<servlet-name>my</servlet-name>-->
-    <!--<servlet-class>MyServlet</servlet-class>-->
-  <!--</servlet>-->
+  <servlet>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>servlet.example.MyServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+
 </web-app>
